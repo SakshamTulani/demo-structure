@@ -12,16 +12,14 @@ import { createAppState } from "@/state"
 type Options = {
   /** The URL the component renders at. */
   route?: string
-  /** Initial app state, such as the selected fleet. */
+  /** Initial app state, such as the selected category. */
   appState?: Parameters<typeof createAppState>[0]
-  /** How long stores buffer socket deltas. Default 0, so a test sees them on the next tick. */
-  flushMs?: number
 }
 
 /** The app's providers around a test: real stores over MSW, the fake socket, fresh app state. */
-function createProviders({ route = "/", appState, flushMs = 0 }: Options) {
+function createProviders({ route = "/", appState }: Options) {
   const socket = createFakeRealtimeConnection()
-  const stores = createStores({ http: httpClient, realtime: socket, flushMs })
+  const stores = createStores({ http: httpClient, realtime: socket })
   const state = createAppState(appState)
   function Providers({ children }: { children: ReactNode }) {
     return (

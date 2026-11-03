@@ -1,1 +1,0 @@
-export { commandCenterModule } from "./module"

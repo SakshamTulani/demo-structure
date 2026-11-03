@@ -6,61 +6,54 @@ import { httpClient } from "@/shared/api"
 import { createFakeRealtimeConnection } from "@/shared/realtime/testing"
 import { apiUrl, server } from "@/test/server"
 
-import { buildApiHistoryItem } from "./commands/testing"
+import { buildApiCategory } from "./categories/testing"
+import { buildApiProduct } from "./products/testing"
 import { createStores } from "./stores"
-import { buildApiVehicleDetails } from "./vehicles/testing"
 
 describe("stores talking through events", () => {
-  it("sendCommand refreshes its own history and, through command/sent, the vehicle's details", async () => {
-    let historyLoads = 0
-    let detailLoads = 0
+  it("catalog/REQ-6: a rename in CategoryStore refreshes ProductStore's products through category/renamed", async () => {
+    let name = "Clothes"
     server.use(
-      http.post(apiUrl("/commands/getcommandupdatesbyvehicle"), () => {
-        historyLoads++
-        return HttpResponse.json([buildApiHistoryItem()])
-      }),
-      http.post(apiUrl("/vehicles/details"), () => {
-        detailLoads++
-        return HttpResponse.json(buildApiVehicleDetails())
-      }),
-      http.post(apiUrl("/commands/sendcommandtovehicle"), () => HttpResponse.json({}))
+      http.get(apiUrl("/products"), () =>
+        HttpResponse.json([buildApiProduct({ category: { id: 1, name } })])
+      ),
+      http.get(apiUrl("/products/1"), () =>
+        HttpResponse.json(buildApiProduct({ category: { id: 1, name } }))
+      ),
+      http.put(apiUrl("/categories/1"), async ({ request }) => {
+        name = ((await request.json()) as { name: string }).name
+        return HttpResponse.json(buildApiCategory({ name }))
+      })
     )
     const stores = createStores({ http: httpClient, realtime: createFakeRealtimeConnection() })
-    stores.commands.getHistory("f1", "v1").mount()
-    stores.vehicles.getVehicle("f1", "v1").mount()
-    await waitFor(() => expect(historyLoads + detailLoads).toBe(2))
+    const list = stores.products.getProducts({ categoryId: 1, search: "", page: 1 })
+    const detail = stores.products.getProduct(1)
+    list.mount()
+    detail.mount()
+    await waitFor(() => expect(list.getSnapshot().data?.items[0]?.categoryName).toBe("Clothes"))
+    await waitFor(() => expect(detail.getSnapshot().data?.categoryName).toBe("Clothes"))
 
-    await stores.commands.sendCommand({
-      fleetId: "f1",
-      vehicleId: "v1",
-      commandId: 1,
-      validTill: null,
-    })
+    await stores.categories.renameCategory({ categoryId: 1, name: "Apparel" })
 
-    await waitFor(() => expect(historyLoads).toBe(2))
-    await waitFor(() => expect(detailLoads).toBe(2))
+    await waitFor(() => expect(list.getSnapshot().data?.items[0]?.categoryName).toBe("Apparel"))
+    await waitFor(() => expect(detail.getSnapshot().data?.categoryName).toBe("Apparel"))
   })
 
-  it("an event leaves another fleet's vehicle alone", async () => {
-    let detailLoads = 0
+  it("leaves another category's products alone", async () => {
+    let loads = 0
     server.use(
-      http.post(apiUrl("/vehicles/details"), () => {
-        detailLoads++
-        return HttpResponse.json(buildApiVehicleDetails())
+      http.get(apiUrl("/products"), () => {
+        loads++
+        return HttpResponse.json([buildApiProduct({ category: { id: 2, name: "Shoes" } })])
       }),
-      http.post(apiUrl("/commands/sendcommandtovehicle"), () => HttpResponse.json({}))
+      http.put(apiUrl("/categories/1"), () => HttpResponse.json(buildApiCategory()))
     )
     const stores = createStores({ http: httpClient, realtime: createFakeRealtimeConnection() })
-    stores.vehicles.getVehicle("f2", "v1").mount()
-    await waitFor(() => expect(detailLoads).toBe(1))
+    stores.products.getProducts({ categoryId: 2, search: "", page: 1 }).mount()
+    await waitFor(() => expect(loads).toBe(1))
 
-    await stores.commands.sendCommand({
-      fleetId: "f1",
-      vehicleId: "v1",
-      commandId: 1,
-      validTill: null,
-    })
+    await stores.categories.renameCategory({ categoryId: 1, name: "Apparel" })
 
-    expect(detailLoads).toBe(1)
+    expect(loads).toBe(1)
   })
 })

@@ -107,6 +107,19 @@ export function formatNumber(
   return opts.unit ? `${text} ${opts.unit}` : text
 }
 
+const moneyFormats = new Map<string, Intl.NumberFormat>()
+
+/** An amount of money with its currency's symbol and decimals: "$44.00". */
+export function formatMoney(value: number | null | undefined, currency = "USD"): string {
+  if (value === null || value === undefined || !Number.isFinite(value)) return MISSING
+  let f = moneyFormats.get(currency)
+  if (!f) {
+    f = new Intl.NumberFormat(NUMBER_LOCALE, { style: "currency", currency })
+    moneyFormats.set(currency, f)
+  }
+  return f.format(value)
+}
+
 /** A percentage given as a percent value (12.5 means 12.5%): "12.5%". */
 export function formatPercent(value: number | null | undefined, decimals = 1): string {
   if (value === null || value === undefined || !Number.isFinite(value)) return MISSING

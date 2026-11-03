@@ -10,4 +10,4 @@ Keep this index in the same commit as the spec it lists, with rows in alphabetic
 
 | Spec | Status | Summary |
 |---|---|---|
-| <!-- [command-center](command-center/spec.md) --> | <!-- approved --> | <!-- Send remote commands to a vehicle and see their status live --> |
+| [catalog](catalog/spec.md) | approved | Browse, search and manage a product catalog: two stores talking through events, app and module state, schema-validated forms |

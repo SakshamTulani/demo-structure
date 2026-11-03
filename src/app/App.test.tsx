@@ -6,5 +6,6 @@ import { App } from "./App"
 it("links to every registered module from the navigation", async () => {
   render(<App />)
 
-  expect(await screen.findByRole("link", { name: "Command center" })).toBeInTheDocument()
+  expect(await screen.findByRole("link", { name: "Catalog" })).toBeInTheDocument()
+  expect(screen.getByRole("link", { name: "Manage" })).toBeInTheDocument()
 })

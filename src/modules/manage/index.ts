@@ -1,0 +1,1 @@
+export { manageModule } from "./module"
