@@ -6,7 +6,7 @@ import { z } from "zod"
  * startup when one is missing, instead of failing later on first use.
  */
 const schema = z.object({
-  PUBLIC_API_URL: z.url().default("http://localhost:8080"),
+  PUBLIC_API_URL: z.url().default("https://api.escuelajs.co/api/v1"),
   PUBLIC_WS_URL: z.url().default("ws://localhost:8081"),
 })
 

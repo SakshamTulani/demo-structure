@@ -1,27 +1,25 @@
 import type { HttpClient } from "@/shared/api"
 import type { RealtimeConnection } from "@/shared/realtime"
 
-import { CommandStore } from "./commands"
+import { CategoryStore } from "./categories"
 import { DataEvents } from "./events"
-import { VehicleStore } from "./vehicles"
+import { ProductStore } from "./products"
 
 export type DataDeps = {
   http: HttpClient
+  /** Unused by this app's stores (no live data); kept so a streaming store can be added. */
   realtime: RealtimeConnection
-  /** How long socket deltas are buffered. Tests pass a small value. */
-  flushMs?: number
 }
 
 /**
  * Builds every store once, around one event bus. src/app/App.tsx calls it with
- * the real http client and socket; src/test/render.tsx with the fake socket.
- * A store that reads another store's data receives it here, one direction only.
+ * the real http client; src/test/render.tsx with MSW and the fake socket.
  */
 export function createStores(deps: DataDeps) {
   const events = new DataEvents()
   return {
-    commands: new CommandStore({ http: deps.http, events }),
-    vehicles: new VehicleStore({ ...deps, events }),
+    categories: new CategoryStore({ http: deps.http, events }),
+    products: new ProductStore({ http: deps.http, events }),
   }
 }
 

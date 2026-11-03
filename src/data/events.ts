@@ -3,9 +3,7 @@
  * what happened; each store that caches affected data invalidates its own
  * queries (frontend-architecture, "Stores talk through events").
  */
-export type DataEvent =
-  | { type: "command/sent"; fleetId: string; vehicleId: string; commandId: number }
-  | { type: "vehicle/renamed"; fleetId: string; vehicleId: string }
+export type DataEvent = { type: "category/renamed"; categoryId: number }
 
 type Handler<T extends DataEvent["type"]> = (event: Extract<DataEvent, { type: T }>) => void
 

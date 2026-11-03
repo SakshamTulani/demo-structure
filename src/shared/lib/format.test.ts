@@ -5,6 +5,7 @@ import {
   formatDateInput,
   formatDateTime,
   formatDuration,
+  formatMoney,
   formatNumber,
   formatPercent,
   formatRelative,
@@ -73,5 +74,15 @@ describe("date inputs", () => {
     expect(parseDateInput("2026-10-29")?.getDate()).toBe(29)
     expect(parseDateInput("29-10-2026")).toBeNull()
     expect(parseDateInput("")).toBeNull()
+  })
+})
+
+describe("formatMoney", () => {
+  it("shows two decimals and the currency symbol", () => {
+    expect(formatMoney(44)).toMatch(/\$\s?44\.00/)
+  })
+
+  it("shows a missing amount as the missing mark", () => {
+    expect(formatMoney(null)).toBe(MISSING)
   })
 })

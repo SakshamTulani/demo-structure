@@ -7,14 +7,14 @@ import { realtime } from "@/shared/realtime"
 import { createAppState } from "@/state"
 
 import { router } from "./router"
-import { syncFleetWithUrl } from "./syncFleetWithUrl"
+import { syncCategoryWithUrl } from "./syncCategoryWithUrl"
 
 // The composition root: stores and app state are built once, before the first render.
 // The WebSocket is not opened here: call realtime.connect() once the user is
 // signed in and the backend expects it.
 const stores = createStores({ http: httpClient, realtime })
 const state = createAppState()
-syncFleetWithUrl(state)
+syncCategoryWithUrl(state, (listener) => router.subscribe(listener))
 
 export function App() {
   return (
