@@ -1,0 +1,311 @@
+{
+  "version": 1,
+  "skills": {
+    "ag-grid": {
+      "source": "SakshamTulani/software-factory",
+      "sourceType": "github",
+      "skillPath": "skills/frontend/ag-grid/SKILL.md",
+      "computedHash": "41ef928b450d516a48e61094e9d2c655874e060c7c6504a1dbb38004131b7929"
+    },
+    "browser-testing-with-devtools": {
+      "source": "SakshamTulani/software-factory",
+      "sourceType": "github",
+      "skillPath": "skills/frontend/browser-testing-with-devtools/SKILL.md",
+      "computedHash": "bb024bdfe9debcbd21f6204e69a1e06b4cfe4e39fc724c4f62fd35a3ccdef052"
+    },
+    "ci-cd-and-automation": {
+      "source": "SakshamTulani/software-factory",
+      "sourceType": "github",
+      "skillPath": "skills/core/ci-cd-and-automation/SKILL.md",
+      "computedHash": "d3bc86ba96f84579d4970744ae63334f2bfd7d1a1f0d450fbc56bc31ac042f90"
+    },
+    "code-review-and-quality": {
+      "source": "SakshamTulani/software-factory",
+      "sourceType": "github",
+      "skillPath": "skills/core/code-review-and-quality/SKILL.md",
+      "computedHash": "0493cf3281af230aef4fe77ca29eddc37f630e5eb53fa678770df532ae0c6380"
+    },
+    "code-simplification": {
+      "source": "SakshamTulani/software-factory",
+      "sourceType": "github",
+      "skillPath": "skills/core/code-simplification/SKILL.md",
+      "computedHash": "af5f96176bcf8efaf2f9da4ea58e8af6b9984d9fb0364a2b5126293aa0f8e0d7"
+    },
+    "composition-patterns": {
+      "source": "SakshamTulani/software-factory",
+      "sourceType": "github",
+      "skillPath": "skills/frontend/composition-patterns/SKILL.md",
+      "computedHash": "61f6ac1ea6564904589aa638bd664962fc891f59289c811eb4f53f62df86e11b"
+    },
+    "constraint-driven-development": {
+      "source": "SakshamTulani/software-factory",
+      "sourceType": "github",
+      "skillPath": "skills/core/constraint-driven-development/SKILL.md",
+      "computedHash": "dffed17e1b5b83e28bd9da11c2c163dd6fefac07e5d6020d8e5269980d8f9fd5"
+    },
+    "context-engineering": {
+      "source": "SakshamTulani/software-factory",
+      "sourceType": "github",
+      "skillPath": "skills/core/context-engineering/SKILL.md",
+      "computedHash": "a19d42d31fcd7449227777216ebd3e12d29b54d4df89d1f0314358082389b6bf"
+    },
+    "debugging-and-error-recovery": {
+      "source": "SakshamTulani/software-factory",
+      "sourceType": "github",
+      "skillPath": "skills/core/debugging-and-error-recovery/SKILL.md",
+      "computedHash": "56476c6a86cc1fbf27751a4ac7aaca1d2d170440d007c5ec900a0289a15d82ad"
+    },
+    "documentation-and-adrs": {
+      "source": "SakshamTulani/software-factory",
+      "sourceType": "github",
+      "skillPath": "skills/core/documentation-and-adrs/SKILL.md",
+      "computedHash": "59defcfbdbd86e17359f3ca60d425b3c91396924e72a43680eb9d7481342ab19"
+    },
+    "doubt-driven-development": {
+      "source": "SakshamTulani/software-factory",
+      "sourceType": "github",
+      "skillPath": "skills/core/doubt-driven-development/SKILL.md",
+      "computedHash": "c5119869e0bbe4941868ad66bd47372ca527f24d57d6460fddbf33987d13ba3d"
+    },
+    "engineering-checklists": {
+      "source": "SakshamTulani/software-factory",
+      "sourceType": "github",
+      "skillPath": "skills/core/engineering-checklists/SKILL.md",
+      "computedHash": "c583566bf785d1349bee71972fa1884dc98f2ec3cdb0ae10e6f2142397741ae4"
+    },
+    "file-pr": {
+      "source": "SakshamTulani/software-factory",
+      "sourceType": "github",
+      "skillPath": "skills/core/file-pr/SKILL.md",
+      "computedHash": "519ddca02caf2074ee38ac5dee152fc1e19a12e8d12e08c487d7762f1bf114c5"
+    },
+    "frontend-architecture": {
+      "source": "SakshamTulani/software-factory",
+      "sourceType": "github",
+      "skillPath": "skills/frontend/frontend-architecture/SKILL.md",
+      "computedHash": "47d51a34fc54bd8550c5df7061b64c45c855d61c956a07767acd86bd5a096cff"
+    },
+    "frontend-testing": {
+      "source": "SakshamTulani/software-factory",
+      "sourceType": "github",
+      "skillPath": "skills/frontend/frontend-testing/SKILL.md",
+      "computedHash": "4b212f804963617e70427b0711afab74333dfca365e002d3fda82097c45fdf94"
+    },
+    "frontend-ui-engineering": {
+      "source": "SakshamTulani/software-factory",
+      "sourceType": "github",
+      "skillPath": "skills/frontend/frontend-ui-engineering/SKILL.md",
+      "computedHash": "7d0bee0f28468c48925c09347401d7c450705b21e2da697940f99bc8bfe15218"
+    },
+    "git-workflow-and-versioning": {
+      "source": "SakshamTulani/software-factory",
+      "sourceType": "github",
+      "skillPath": "skills/core/git-workflow-and-versioning/SKILL.md",
+      "computedHash": "f7ef7a74bbcd8ad566761b24672354ff635fc2381732b7d2911ebf47e7d17209"
+    },
+    "idea-refine": {
+      "source": "SakshamTulani/software-factory",
+      "sourceType": "github",
+      "skillPath": "skills/core/idea-refine/SKILL.md",
+      "computedHash": "d7693ccc3014277e3656901a8367dec446e01a2dcda8e7139a7b3b37e892f204"
+    },
+    "incremental-implementation": {
+      "source": "SakshamTulani/software-factory",
+      "sourceType": "github",
+      "skillPath": "skills/core/incremental-implementation/SKILL.md",
+      "computedHash": "21b34bbf825faf525b5c7c96970924f0cc90288258d057cbf7815488321e5c28"
+    },
+    "interview-me": {
+      "source": "SakshamTulani/software-factory",
+      "sourceType": "github",
+      "skillPath": "skills/core/interview-me/SKILL.md",
+      "computedHash": "2994f27d891910be4f058e8e6b7e0a1e53bcfd4f3b5f18d6b2e9d31ac29fdf99"
+    },
+    "performance-optimization": {
+      "source": "SakshamTulani/software-factory",
+      "sourceType": "github",
+      "skillPath": "skills/core/performance-optimization/SKILL.md",
+      "computedHash": "c47fc5470f628b97373b977fc0c610254a58e8340657803b387fc5a60a1a0837"
+    },
+    "planning-and-task-breakdown": {
+      "source": "SakshamTulani/software-factory",
+      "sourceType": "github",
+      "skillPath": "skills/core/planning-and-task-breakdown/SKILL.md",
+      "computedHash": "f758a0e66ced28764914e1104ffaf9db24e70916aab62dcca0efa38b4d092531"
+    },
+    "project-workflow": {
+      "source": "SakshamTulani/software-factory",
+      "sourceType": "github",
+      "skillPath": "skills/core/project-workflow/SKILL.md",
+      "computedHash": "fb7793420fda95f51a1302d25979ad946f0eceb17b6e5807b7e7ff3e09b88960"
+    },
+    "react-best-practices": {
+      "source": "SakshamTulani/software-factory",
+      "sourceType": "github",
+      "skillPath": "skills/frontend/react-best-practices/SKILL.md",
+      "computedHash": "d8d45a739ac0dd2e5a2b6ab914c40fedf0fb4e465d88ad981afebed41970d2d2"
+    },
+    "rspack-best-practices": {
+      "source": "SakshamTulani/software-factory",
+      "sourceType": "github",
+      "skillPath": "skills/frontend/rspack-best-practices/SKILL.md",
+      "computedHash": "73aa3fd707b1328db690b57050a168635abd84375397c7cb110f9a9bcca00c55"
+    },
+    "rspack-split-chunks": {
+      "source": "SakshamTulani/software-factory",
+      "sourceType": "github",
+      "skillPath": "skills/frontend/rspack-split-chunks/SKILL.md",
+      "computedHash": "67d515a845ead359eb27211a25f63d01becbdd2e90f70ff280339567c5638dfc"
+    },
+    "rstest-best-practices": {
+      "source": "SakshamTulani/software-factory",
+      "sourceType": "github",
+      "skillPath": "skills/frontend/rstest-best-practices/SKILL.md",
+      "computedHash": "047827e0e2e45f981285917c1f7ba7f4989643451b3a79aaa87efa68f25ebcfc"
+    },
+    "rstest-debugging": {
+      "source": "SakshamTulani/software-factory",
+      "sourceType": "github",
+      "skillPath": "skills/frontend/rstest-debugging/SKILL.md",
+      "computedHash": "30cf19d7acdec58945edad1d07e4744af47989a00fe8c86b8b141457584f4684"
+    },
+    "security-and-hardening": {
+      "source": "SakshamTulani/software-factory",
+      "sourceType": "github",
+      "skillPath": "skills/core/security-and-hardening/SKILL.md",
+      "computedHash": "274aa34f5eeaa7c426cb41368f3a51a07581d8f7e6bfa622bfe0dfd27eccbd24"
+    },
+    "sf-build": {
+      "source": "SakshamTulani/software-factory",
+      "sourceType": "github",
+      "skillPath": "skills/core/sf-build/SKILL.md",
+      "computedHash": "d8a8f6b6dde7c5d51e506737539170a9cf665f8c5144cdd51a177eb562dcf9df"
+    },
+    "sf-constraints": {
+      "source": "SakshamTulani/software-factory",
+      "sourceType": "github",
+      "skillPath": "skills/core/sf-constraints/SKILL.md",
+      "computedHash": "2b4e27ec862f251ce5d6283d48080640ee352388eaf063e9bd55eaf811d0bfc3"
+    },
+    "sf-new-module": {
+      "source": "SakshamTulani/software-factory",
+      "sourceType": "github",
+      "skillPath": "skills/frontend/sf-new-module/SKILL.md",
+      "computedHash": "cc80167dc05d7aee19ce11966b98e1440a0d5ff27e94145509b83e3a38fe6a45"
+    },
+    "sf-new-store": {
+      "source": "SakshamTulani/software-factory",
+      "sourceType": "github",
+      "skillPath": "skills/frontend/sf-new-store/SKILL.md",
+      "computedHash": "54a05d1416e78af6c953b7bf5a969d55a4cad5fbd86804acf208cb49d8414b46"
+    },
+    "sf-plan": {
+      "source": "SakshamTulani/software-factory",
+      "sourceType": "github",
+      "skillPath": "skills/core/sf-plan/SKILL.md",
+      "computedHash": "9ca9e127e8e051bfa4308ccf2cf96c1df283e1275eb26e1d511d837c99b051de"
+    },
+    "sf-retro": {
+      "source": "SakshamTulani/software-factory",
+      "sourceType": "github",
+      "skillPath": "skills/core/sf-retro/SKILL.md",
+      "computedHash": "46458125f86e05c442d5e074ac45579e2f56609c7193179e1c8b56b7c6bc379e"
+    },
+    "sf-review": {
+      "source": "SakshamTulani/software-factory",
+      "sourceType": "github",
+      "skillPath": "skills/core/sf-review/SKILL.md",
+      "computedHash": "16e925387575f0786c5a6b412e42a701437d4d6b0cbaffede2f110004de6c2d9"
+    },
+    "sf-setup": {
+      "source": "SakshamTulani/software-factory",
+      "sourceType": "github",
+      "skillPath": "skills/core/sf-setup/SKILL.md",
+      "computedHash": "36704e4d8c1bc238c5c6c9eb72e238f3e18c7c5d36b40e631a6a61606cbee735"
+    },
+    "sf-ship": {
+      "source": "SakshamTulani/software-factory",
+      "sourceType": "github",
+      "skillPath": "skills/core/sf-ship/SKILL.md",
+      "computedHash": "331d43d0a6e087204a656b2eaefdd4185f32af4e36bc1f8c1803d7ad65c7f786"
+    },
+    "sf-simplify": {
+      "source": "SakshamTulani/software-factory",
+      "sourceType": "github",
+      "skillPath": "skills/core/sf-simplify/SKILL.md",
+      "computedHash": "0f71e7f86a04d79414f41a0ba41c4505b9739140d2064f4e07c58679e2547738"
+    },
+    "sf-spec": {
+      "source": "SakshamTulani/software-factory",
+      "sourceType": "github",
+      "skillPath": "skills/core/sf-spec/SKILL.md",
+      "computedHash": "83012c2505e8c222046aad58dedc58e9b0871b56a5c28dd6f3ff28b16d13fef5"
+    },
+    "sf-test": {
+      "source": "SakshamTulani/software-factory",
+      "sourceType": "github",
+      "skillPath": "skills/core/sf-test/SKILL.md",
+      "computedHash": "8d5851360b50a8b731c1fca6e2db171ca6f0129d4a77a92d68edc3f3939794c5"
+    },
+    "sf-transcribe": {
+      "source": "SakshamTulani/software-factory",
+      "sourceType": "github",
+      "skillPath": "skills/core/sf-transcribe/SKILL.md",
+      "computedHash": "d77d63e9c6cfc603ae074785c84b2dd78d5009bd5ba10b7c6e536c711d5407fe"
+    },
+    "sf-upstream": {
+      "source": "SakshamTulani/software-factory",
+      "sourceType": "github",
+      "skillPath": "skills/core/sf-upstream/SKILL.md",
+      "computedHash": "3a6a5de964a722feea130f5b56c6f4b375a738fa6092691aea953dc1a9f8c219"
+    },
+    "sf-webperf": {
+      "source": "SakshamTulani/software-factory",
+      "sourceType": "github",
+      "skillPath": "skills/frontend/sf-webperf/SKILL.md",
+      "computedHash": "8a72970910af1ba5946d042c14eaea127f0e80450a1d816c75f8b35f58ee09c9"
+    },
+    "shadcn": {
+      "source": "SakshamTulani/software-factory",
+      "sourceType": "github",
+      "skillPath": "skills/frontend/shadcn/SKILL.md",
+      "computedHash": "779180a795968d0468dfe173ceb962aa408d9fcb04b077c38d88d9a0c2dc2887"
+    },
+    "shipping-and-launch": {
+      "source": "SakshamTulani/software-factory",
+      "sourceType": "github",
+      "skillPath": "skills/core/shipping-and-launch/SKILL.md",
+      "computedHash": "9c6b0470b721b150bc1f0204fec561b57a622717659b06667ad4eef8cc555344"
+    },
+    "source-driven-development": {
+      "source": "SakshamTulani/software-factory",
+      "sourceType": "github",
+      "skillPath": "skills/core/source-driven-development/SKILL.md",
+      "computedHash": "359f341c011b945ba08a4a858f953e36aff6e93ef3aa7ffac36101598132c68a"
+    },
+    "spec-driven-development": {
+      "source": "SakshamTulani/software-factory",
+      "sourceType": "github",
+      "skillPath": "skills/core/spec-driven-development/SKILL.md",
+      "computedHash": "2f98525db0fde46ba3f568188c0d060de202aabafb391d857d7d6c67f19d2b0e"
+    },
+    "test-driven-development": {
+      "source": "SakshamTulani/software-factory",
+      "sourceType": "github",
+      "skillPath": "skills/core/test-driven-development/SKILL.md",
+      "computedHash": "d1520969d8987147f68536a89b83e199c871c9c2c3ff965f874e480e4c9d0a38"
+    },
+    "using-agent-skills": {
+      "source": "SakshamTulani/software-factory",
+      "sourceType": "github",
+      "skillPath": "skills/core/using-agent-skills/SKILL.md",
+      "computedHash": "6cde9dbad8ce3bd0d91531587fabf4c278ca24652f3dbb225cbcf27ca6062b6d"
+    },
+    "web-design-guidelines": {
+      "source": "SakshamTulani/software-factory",
+      "sourceType": "github",
+      "skillPath": "skills/frontend/web-design-guidelines/SKILL.md",
+      "computedHash": "1035f8487b7e77cfaeae5bf40466340a2cd3273f31334355af8148ae4526998b"
+    }
+  }
+}

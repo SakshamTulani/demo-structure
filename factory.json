@@ -1,0 +1,30 @@
+{
+  "factory": "SakshamTulani/software-factory",
+  "factoryCommit": "d25a9c6dead2bcff53d1b40e94f6c8879646b734",
+  "template": "frontend/react-rspack",
+  "designSystem": "intellicar-default",
+  "createdOn": "2026-11-03",
+  "tracker": "local",
+  "git": "main",
+  "conversations": { "mode": "local", "auto": false, "dir": "docs/conversations" },
+  "loadBearing": [
+    "package.json",
+    "src/app/App.tsx",
+    "src/data/core/**",
+    "src/data/events.ts",
+    "src/data/stores.ts",
+    "src/bindings/**",
+    "src/shared/api/**",
+    "src/shared/config/**",
+    "src/shared/realtime/**",
+    "src/shared/lib/app-module.tsx",
+    ".github/**",
+    ".claude/**",
+    ".husky/**",
+    ".dependency-cruiser.cjs",
+    "biome.json",
+    "biome-plugins/**",
+    "rspack.config.ts",
+    "rstest.config.ts"
+  ]
+}

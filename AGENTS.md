@@ -1,0 +1,39 @@
+# intellicar-catalog-demo
+
+A small shop catalog over the public Platzi Fake Store API that shows the factory's frontend architecture end to end: two stores talking through an event, app state and module state, schemas and forms. Built for Intellicar — see [docs/client.md](docs/client.md) and [docs/product.md](docs/product.md).
+
+## Commands
+
+Single pnpm package. Run everything from the repo root.
+
+```bash
+pnpm install      # needs git access to intellicars/fmswsclientjs (SSH key or gh auth setup-git)
+pnpm dev          # dev server on :3000; copy .env.example to .env first
+pnpm check:fast   # what the Stop hook runs each turn: typecheck + lint + depcruise + tests related to changes
+pnpm check        # Definition of Done, before every commit and in CI: the same with every test
+pnpm check:deep   # check + build + pnpm audit, for load-bearing changes (factory.json loadBearing)
+pnpm depcruise    # architecture rules only (.dependency-cruiser.cjs)
+pnpm format       # Biome: format and sort imports
+```
+
+## Rules for every task
+
+- Extremely concise. Sacrifice grammar for the sake of concision: drop articles, filler and ceremony; fragments fine. Never drop `not`/`never`/`only`, numbers, or exact code, commands, paths and errors. Applies to chat, plans, task notes and commit bodies. Specs, ADRs and PR descriptions stay concise but in full sentences, because people read them later.
+- Follow the lifecycle in the `project-workflow` skill. It decides whether the change needs a spec.
+- A task is done only when `pnpm check` is green. Never weaken a dependency-cruiser rule, skip a test or add a suppression to get there; ask instead.
+- Ask before changing a load-bearing path (`factory.json` `loadBearing`) or `factory.json`, unless an approved plan task names that path. `.claude/hooks/guard-load-bearing.sh` asks the user on every such edit.
+- Use the domain words in [GLOSSARY.md](GLOSSARY.md).
+
+## Read when relevant
+
+| When you are… | Read |
+|---|---|
+| Writing or changing code in `src/` | the `frontend-architecture` skill |
+| Building or changing UI | [DESIGN.md](DESIGN.md), then the `shadcn` skill |
+| Writing or reviewing tests | the `frontend-testing` skill |
+| Starting a feature, bug fix or refactor | the `project-workflow` skill |
+| Branching, committing or opening a PR (`file-pr`) | [docs/agents/git.md](docs/agents/git.md) |
+| Creating, reading or updating issues and tasks | [docs/agents/issue-tracker.md](docs/agents/issue-tracker.md) |
+| Needing business, backend or API detail about a feature | [docs/agents/upstream.md](docs/agents/upstream.md) |
+| Looking for why something is built this way | [docs/adr/](docs/adr/README.md) |
+| Looking for what a feature must do | [docs/specs/](docs/specs/README.md) |
